@@ -7,7 +7,7 @@ $db = new DBHelper();
 $tblName = 'past_papers';
 if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
 {
-    if($_REQUEST['action_type'] == 'add')
+   /*  if($_REQUEST['action_type'] == 'add')
     {
         $exam_type_name = $_POST['exam_type_name'];// 
         $subject_id=$_POST['subject_id'];
@@ -21,7 +21,7 @@ if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
        /*  if(empty($documentType)){
             $errMSG = "Please Select Document Type.";
         }
-        else */ if(empty($imgFile)){
+        else if(empty($imgFile)){
             $errMSG = "Please Select File.";
         }
 
@@ -31,15 +31,11 @@ if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
 
             $imgExt = strtolower(pathinfo($imgFile,PATHINFO_EXTENSION)); // get image extension
 
-            // valid image extensions
             $valid_extensions = array('pdf'); // valid extensions
 
-            // rename uploading image
             $userpic = rand(1000,1000000).".".$imgExt;
 
-            // allow valid image file formats
             if(in_array($imgExt, $valid_extensions)){
-                // Check file size '5MB'
                 if($imgSize < 5000000){
                     move_uploaded_file($tmp_dir,$upload_dir.$userpic);
                 }
@@ -53,7 +49,6 @@ if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
         }
 
         $status=false;
-        // if no error occured, continue ....
         if(!isset($errMSG))
         {
 
@@ -67,22 +62,23 @@ if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
             $status=true;
             if($status)
             {
-                //$successMSG = "new record succesfully inserted ...";
+                $successMSG = "new record succesfully inserted ...";
                 $successMSG="succ";
                 header("Location:index.php?msg=".$successMSG);
-                //header("refresh:5;index3.php?sp=document_upload"); // redirects image view page after 5 seconds.
+                header("refresh:5;index3.php?sp=document_upload"); // redirects image view page after 5 seconds.
             }
             else
             {
                 header("Location:index.php?msg=".$errMSG);
-                //$errMSG = "error while inserting....";
             }
         }
         else {
             header("Location:index.php?msg=" . $errMSG);
         }
     }
-     else  if($_REQUEST['action_type'] == 'drop')
+     else   */
+     
+     if($_REQUEST['action_type'] == 'delete')
         {
             $condition = array('attachmentID' => $db->$_REQUEST['id']);
             $update = $db->delete($tblName,$condition);

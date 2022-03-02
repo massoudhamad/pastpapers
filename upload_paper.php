@@ -141,6 +141,7 @@ if(isset($_POST['doSubmit']))
                 <div class="padd">
                   <div class="form quick-post">
                   <div class="row">
+
                   <div class="col-lg-6">
                       <div class="form-group">
                         <label for="exam type">Exam Classes</label>                  
@@ -173,7 +174,7 @@ if(isset($_POST['doSubmit']))
 
      <div class="row">                 
                   <div class="col-lg-6">
-                      <div class="form-group">
+                 
                         <label for="examYear">Exam Year</label>
                        
                           <select name="exam_year" class="form-control" required>
@@ -186,10 +187,9 @@ if(isset($_POST['doSubmit']))
         </select>
                         
                      </div>
-                  </div>
+                 
 
-                     <div class="col-lg-6"> 
-                  
+                     <div class="col-lg-6"> <br>
                         <label for="Attachment">Attachment</label>
                           <input type='file' name="pdf_file" accept=".pdf" />
                       </div>
@@ -208,21 +208,21 @@ if(isset($_POST['doSubmit']))
                 </div>
 
     
-
+<br>
 <div class="row">
   <hr>
 </div>
 
 
 <div class="row">
-                    <table  id="example" border="1" class="display nowrap" cellspacing="0" width="100%">
+                    <table class="table datatable"  cellspacing="0" width="100%">
                       <thead>
                       <tr>
-                        <th width=10>No.</th>
-                        <th width=100>Class</th>
-                        <th width=200>Subject</th>
-                        <th width=100>Year</th>
-                        <th width=200>Document</th>
+                        <th>No.</th>
+                        <th>Class</th>
+                        <th>Subject</th>
+                        <th>Year</th>
+                        <th>Document</th>
                         <th>Action</th>
                          </tr>
                       </thead>
@@ -244,13 +244,17 @@ if(isset($_POST['doSubmit']))
                       $exam_type_code=$up['exam_type_code'];
                       $examYear=$up['exam_year'];
                       $attachment=$up['attachment'];
+
+                      $subjectName=$db->getData("exam_subject","exam_subject","exam_subject_id",$subject_id);
+
+                      $exam_class=$db->getData("exam_classes","exam_class","exam_class_id",$exam_type_code);
                        
 
                           ?>
                           <tr>
                           <td><?php echo $count;?></td>
-                          <td><?php echo $exam_type_code;?></td>
-                          <td><?php echo $subject_id;?></td>
+                          <td><?php echo $exam_class;?></td>
+                          <td><?php echo $subjectName;?></td>
                           <td><?php echo $examYear;?></td>
                           <td><a href="upload_doc/<?php echo $attachment;?>" class="glyphicon glyphicon-download-alt" target="_blank">Download</a></td>
                           <td><a href="action_upload_document.php?action_type=delete&id=<?php echo $uploadID; ?>&yearID=<?php echo $academicYearID;?>"
