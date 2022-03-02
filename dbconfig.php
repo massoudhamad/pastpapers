@@ -5,7 +5,7 @@ class Database
     private $host = "localhost";
     private $db_name = "exam_pastpaper";
     private $username = "root";
-    private $password = "Admin123!";
+    private $password = "R@d123!";
     public $conn;
      
     public function dbConnection()
