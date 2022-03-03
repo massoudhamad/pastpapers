@@ -258,7 +258,7 @@ if(isset($_POST['doSubmit']))
                           <td><?php echo $examYear;?></td>
                           <td><a href="upload_doc/<?php echo $attachment;?>" class="glyphicon glyphicon-download-alt" target="_blank">Download</a></td>
                           <td><a href="action_upload_document.php?action_type=delete&id=<?php echo $uploadID; ?>&yearID=<?php echo $academicYearID;?>"
-                                class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure you want to delete this Semester Setting?');">Drop</a></td>
+                                class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure you want to delete this paper?');">Drop</a></td>
                           </tr>
                           <?php 
                         
