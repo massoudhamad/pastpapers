@@ -54,14 +54,14 @@ require_once('header.php');
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="nectaSubjectF4.php">FORM IV</a></h3>
+              <h3><a href="nectaExam.php">FORM IV</a></h3>
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="nectaSubjectF6.php">FORM VI</a></h3>
+              <h3><a href="nectaExam.php">FORM VI</a></h3>
             </div>
           </div>
           </div>

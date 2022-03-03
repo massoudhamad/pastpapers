@@ -32,7 +32,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <?php
+   <?php
 require_once('header.php');
 ?>
   <!-- End Header -->
@@ -40,9 +40,7 @@ require_once('header.php');
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <!-- <h1>Learning Today,<br>Leading Tomorrow</h1> -->
-      <!-- <h2>We are team of talented designers making websites with Bootstrap</h2> -->
-      <!-- <a href="courses.html" class="btn-get-started">Get Started</a> -->
+     
     </div>
   </section><!-- End Hero -->
 
@@ -54,73 +52,19 @@ require_once('header.php');
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="engYrf4.php">ENGLISH</a></h3>
+               <h3><a href="mockExam.php">FORM II MOCK </a></h3>  
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="kiswYrf4.php">KISWAHILI</a></h3>
+              <h3><a href="mockExam.php">FORM IV MOCK</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="diniYrf4.php">DINI</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="arabYrf4.php">ARABIC</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="mathYrf4.php">MATH</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="chemYrf4.php">CHEMISTRY</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="phyYrf4.php">PHYSICS</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="bioYrf4.php">BIOLOGY</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="ictYrf4.php">ICT</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="geoYrf4.php">GEOGRAPHY</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="histYrf4.php">HISTORY</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="civYrf2.php">CIVICS</a></h3>
+              <h3><a href="mockExam.php">FORM VI MOCK</a></h3>
             </div>
           </div>
           </div>

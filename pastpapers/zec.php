@@ -52,20 +52,19 @@ require_once('header.php');
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <!-- <h3><a href="zecsubject4.php">STD IV</a></h3>  -->
-              <h3><a href="zec_std4Exam.php">STD IV</a></h3>  
+               <h3><a href="zecExam.php">STD IV</a></h3>  
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="zecsubject6.php">STD VI</a></h3>
+              <h3><a href="zecExam.php">STD VI</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="zecsubjectF2.php">FORM II</a></h3>
+              <h3><a href="zecExam.php">FORM II</a></h3>
             </div>
           </div>
           </div>

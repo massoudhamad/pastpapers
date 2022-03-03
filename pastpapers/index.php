@@ -1,3 +1,9 @@
+<?php
+
+include("dbconfig.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,9 +78,10 @@ require_once('header.php');
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">MOCK</a></h3>
+              <h3><a href="mock.php">MOCK</a></h3>
             </div>
           </div>
+          
            </div>
       </div>
     </section><!-- End Features Section -->
