@@ -80,10 +80,9 @@ if(isset($_REQUEST['action_type']) && !empty($_REQUEST['action_type']))
      
      if($_REQUEST['action_type'] == 'delete')
         {
-            $condition = array('attachmentID' => $db->$_REQUEST['id']);
+            $condition = array('id' =>$_REQUEST['id']);
             $update = $db->delete($tblName,$condition);
-            $statusMsg = true;
-            header("Location:index.php?sz=attachment&msg=deleted");
+            header("Location:index.php?ep=upload_paper&msg=deleted" );
         }
 }
 

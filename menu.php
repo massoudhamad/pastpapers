@@ -12,25 +12,25 @@
         <span>Upload Exam Paper</span>
       </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link " href="index.php?ep=view_data">
       <i class="bi bi-journal-text"></i>
         <span>View Data</span>
       </a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a class="nav-link " href="/exampaper/pastpapers/">
       <i class="bi bi-journal-text"></i>
         <span>View Exam Papers</span>
       </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link " href="index.php?ep=report">
       <i class="bi bi-layout-text-window-reverse"></i>
         <span>Reports</span>
       </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a class="nav-link " href="index.php?ep=registration">
       <i class="bi bi-card-list"></i>
       <span>User Registration</span>
@@ -47,6 +47,6 @@
       <i class="bi bi-box-arrow-in-right"></i>
       <span>Login</span>
       </a>
-    </li>
+    </li> -->
   </ul>
 </div> 

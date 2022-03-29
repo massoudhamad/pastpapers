@@ -1,9 +1,3 @@
-<?php
-
-include("dbconfig.php");
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +11,7 @@ include("dbconfig.php");
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
- 
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -35,15 +27,12 @@ include("dbconfig.php");
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  
-
-  
-</head>
+  </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-<?php
+   <?php
 require_once('header.php');
 ?>
   <!-- End Header -->
@@ -51,72 +40,68 @@ require_once('header.php');
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-   
+     
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
-    
-   <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-   
+
         <?php 
         include "../DB.php";
         $db=new DBHelper();
-        $exam_type= $db->getRows('exam_type',array(' order_by'=>' exam_type_id ASC'));
+        $exam_classes= $db->getRows('exam_classes',array('where'=>array('exam_type_id'=>$_REQUEST['id'])));
 
-        if(!empty($exam_type))
+        if(!empty($exam_classes))
          {
              ?>
              <?php 
              $count = 0; 
-             foreach($exam_type as $up)
+             foreach($exam_classes as $up)
              { 
                $count++;
-               $id=$up['exam_type_id'];
-               $exam_type_name=$up['exam_type_name'];
+               $id=$up['exam_class_id'];
+               $exam_name=$up['exam_class'];
         ?>
 
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="exam_type.php?id=<?php echo $id;?>"><?php echo $exam_type_name;?></a></h3>
+               <h3><a href="exam_subjects.php?id=<?php echo $id;?>"><?php echo $exam_name;?></a></h3>  
             </div>
           </div>
-          <?php 
-             }
-            }
-          ?>
           <!-- <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="necta.php">NECTA</a></h3>
+              <h3><a href="zecExam.php">STD VI</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="mock.php">MOCK</a></h3>
+              <h3><a href="zecExam.php">FORM II</a></h3>
             </div>
           </div> -->
-          
-           </div>
+          <?php 
+             }}
+             ?> 
+          </div>
+
       </div>
-    </section><!-- End Features Section -->
+    </section>
+    </main>
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
  <?php
 
 require_once('footer.php');
  ?>
   <!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
