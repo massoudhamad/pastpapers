@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS exam_pastpaper;
+CREATE DATABASE IF NOT EXISTS exam_pastpaper;
+USE exam_pastpaper;
 -- MySQL dump 10.16  Distrib 10.1.32-MariaDB, for Win32 (AMD64)
 --
 -- Host: 127.0.0.1    Database: exam_pastpaper

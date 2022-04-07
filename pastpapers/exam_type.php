@@ -49,24 +49,45 @@ require_once('header.php');
       <div class="container" data-aos="fade-up">
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+        <?php 
+        include "../DB.php";
+        $db=new DBHelper();
+        $exam_classes= $db->getRows('exam_classes',array('where'=>array('exam_type_id'=>$_REQUEST['id'])));
+
+        if(!empty($exam_classes))
+         {
+             ?>
+             <?php 
+             $count = 0; 
+             foreach($exam_classes as $up)
+             { 
+               $count++;
+               $id=$up['exam_class_id'];
+               $exam_name=$up['exam_class'];
+        ?>
+
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-               <h3><a href="mockExam.php">FORM II MOCK </a></h3>  
+               <h3><a href="exam_subjects.php?id=<?php echo $id;?>"><?php echo $exam_name;?></a></h3>  
+            </div>
+          </div>
+          <!-- <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-database-2-line" style="color: #47aeff;"></i>
+              <h3><a href="zecExam.php">STD VI</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="mockExam.php">FORM IV MOCK</a></h3>
+              <h3><a href="zecExam.php">FORM II</a></h3>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="mockExam.php">FORM VI MOCK</a></h3>
-            </div>
-          </div>
+          </div> -->
+          <?php 
+             }}
+             ?> 
           </div>
 
       </div>

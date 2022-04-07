@@ -39,11 +39,11 @@ require_once('header.php');
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
+  <!-- <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       
     </div>
-  </section>
+  </section> -->
   <!-- End Hero -->
 
 
@@ -51,33 +51,69 @@ require_once('header.php');
 <div class="container">
  
 
+
   <div class="col-md-6 col-sm-6">
     <h3><bold>STD FOUR EXAM PAST PAPERS</bold></h3>
     <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+
+    <?php 
+        include "../DB.php";
+        $db=new DBHelper();
+        $exam_subject= $db->getRows('exam_subject',array('where'=>array('exam_class_id'=>$_REQUEST['id'])));
+
+        if(!empty($exam_subject))
+         {
+             ?>
+             <?php 
+             $count = 0; 
+             foreach($exam_subject as $up)
+             { 
+               $count++;
+               $id=$up['exam_subject_id'];
+               $exam_subject=$up['exam_subject'];
+        ?>
+
       <div class="panel">
         <div class="panel-heading" role="tab" id="headingOne">
           <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          ENGLISH
+        <?php echo $exam_subject;?>
         </a>
       </h4>
         </div>
+        <?php 
+        $subject= $db->getRows('past_papers',array('where'=>array('subject_id'=>$id)));
+        if(!empty($subject))
+         {
+             ?>
+             <?php 
+             $count = 0; 
+             foreach($subject as $up)
+             { 
+               $count++;
+               $id=$up['id'];
+               $exam_year=$up['exam_year'];
+               $attachment=$up['attachment'];
+               /* $exam_subject=$up['exam_subject']; */
+        ?>
         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
           <div class="panel-body">
             <ul>
-                <li>ENGLISH 2017</li>
-                <li>ENGLISH 2018</li>
-                <li>ENGLISH 2019</li>
-                <li>ENGLISH 2020</li>
-                <li>ENGLISH 2021</li>
+                <li><a href="http://127.0.0.1:9999/upload_doc/<?php echo $attachment;?>" class="glyphicon glyphicon-download-alt" target="_blank"><?php echo $exam_subject;?> <?php echo $exam_year;?></a></li>
             </ul>
            
           </div>
         </div>
+        <?php 
+        }
+    }?>
       </div>
+      <?php }
+         }
+      ?>
       <!-- end of panel -->
 
-      <div class="panel">
+      <!-- <div class="panel">
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -97,7 +133,6 @@ require_once('header.php');
           </div>
         </div>
       </div>
-      <!-- end of panel -->
 
       <div class="panel">
         <div class="panel-heading" role="tab" id="headingThree">
@@ -119,7 +154,6 @@ require_once('header.php');
           </div>
         </div>
       </div>
-      <!-- end of panel -->
 
       <div class="panel">
         <div class="panel-heading" role="tab" id="headingThree">
@@ -141,7 +175,6 @@ require_once('header.php');
           </div>
         </div>
       </div>
-      <!-- end of panel -->
 
       <div class="panel">
         <div class="panel-heading" role="tab" id="headingThree">
@@ -163,7 +196,6 @@ require_once('header.php');
           </div>
         </div>
       </div>
-      <!-- end of panel -->
 
       <div class="panel">
         <div class="panel-heading" role="tab" id="headingThree">
@@ -184,7 +216,7 @@ require_once('header.php');
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- end of panel -->
 
 
